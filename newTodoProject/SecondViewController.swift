@@ -10,9 +10,17 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var newTodoTextfield: UITextField!
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let firstVC: ViewController = segue.destination as! ViewController
+        firstVC.newTodoList = newTodoTextfield.text!
+        //print(newTodoTextfield.text)
+        //UserDefaults.standard.set(newTodoTextfield.text!, forKey: "task")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     

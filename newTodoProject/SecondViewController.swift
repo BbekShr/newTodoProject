@@ -11,10 +11,16 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var newTodoTextfield: UITextField!
-   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let firstVC: ViewController = segue.destination as! ViewController
-        firstVC.newTodoList = newTodoTextfield.text!
+        
+        if (newTodoTextfield.text != nil) {
+            firstVC.newTodoList = newTodoTextfield.text!
+        } else {
+            print("No input found")
+        }
+        
+        //firstVC.newTodoList = newTodoTextfield.text!
         //print(newTodoTextfield.text)
         //UserDefaults.standard.set(newTodoTextfield.text!, forKey: "task")
     }

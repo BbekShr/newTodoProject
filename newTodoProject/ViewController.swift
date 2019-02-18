@@ -10,26 +10,17 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
-    @IBAction func hamburgurMenu(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let VC = storyboard.instantiateViewController(withIdentifier: "TaskComplete") as! TaskComTableViewController
-        VC.markedCompletedTextList = completedArray
-        self.navigationController?.pushViewController(VC, animated: true)
-
-    }
-    
     var newTodoList: String = ""
     var todoListArray: [String] = []
     
     var newCompletedList: String = ""
     var completedArray: [String] = []
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { 
         return todoListArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
         cell.textLabel?.text = todoListArray[indexPath.row]
         return cell
@@ -54,9 +45,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             print(self.completedArray)
         }
+        
         contextItem.backgroundColor = .green
         let swipeActions = UISwipeActionsConfiguration(actions: [contextItem])
-        
         return swipeActions
     }
 
@@ -77,9 +68,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
         //label.text = newTodoList
         print("Going back")
-        todoListArray.insert(newTodoList, at: 0)
-    
-        UserDefaults.standard.set(todoListArray, forKey: "task")
+        
+        if (newTodoList.isEmpty) {
+             print("No input found " )
+            
+        } else {
+           
+            todoListArray.insert(newTodoList, at: 0)
+            UserDefaults.standard.set(todoListArray, forKey: "task")
+        }
+        
         self.tableView.reloadData()
     }
     

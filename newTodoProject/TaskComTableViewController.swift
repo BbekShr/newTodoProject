@@ -13,7 +13,11 @@ class TaskComTableViewController: UIViewController, UITableViewDelegate, UITable
   //  var markedCompletedText = ""
     var markedCompletedTextList: [String] = []
 
-     @IBOutlet weak var completeTableView: UITableView!
+    @IBAction func dismissButton(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBOutlet weak var completeTableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return markedCompletedTextList.count
     }
@@ -32,8 +36,6 @@ class TaskComTableViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        self.completeTableView.reloadData()
         markedCompletedTextList = UserDefaults.standard.array(forKey: "completed") as! [String]
         self.completeTableView.reloadData()
         // Do any additional setup after loading the view.

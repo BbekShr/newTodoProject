@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42199B56221746D600D14FBE /* TaskComTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42199B55221746D600D14FBE /* TaskComTableViewController.swift */; };
 		424919A82217168100EB027C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424919A72217168100EB027C /* AppDelegate.swift */; };
 		424919AA2217168100EB027C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424919A92217168100EB027C /* ViewController.swift */; };
 		424919AD2217168100EB027C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 424919AB2217168100EB027C /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42199B55221746D600D14FBE /* TaskComTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskComTableViewController.swift; sourceTree = "<group>"; };
 		424919A42217168100EB027C /* newTodoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newTodoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		424919A72217168100EB027C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		424919A92217168100EB027C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				424919B32217168200EB027C /* LaunchScreen.storyboard */,
 				424919B62217168200EB027C /* Info.plist */,
 				424919AE2217168100EB027C /* newTodoProject.xcdatamodeld */,
+				42199B55221746D600D14FBE /* TaskComTableViewController.swift */,
 			);
 			path = newTodoProject;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				424919BF22171B3D00EB027C /* SecondViewController.swift in Sources */,
 				424919B02217168100EB027C /* newTodoProject.xcdatamodeld in Sources */,
 				424919AA2217168100EB027C /* ViewController.swift in Sources */,
+				42199B56221746D600D14FBE /* TaskComTableViewController.swift in Sources */,
 				424919A82217168100EB027C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
